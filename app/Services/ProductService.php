@@ -66,9 +66,9 @@ class ProductService
 
         if ($product) {
             $product->update([
-                'name' => $payload->name,
-                'price' => $payload->price,
-                'description' => $payload->description,
+                'name' => $request->name,
+                'price' => $request->price,
+                'description' => $request->description,
             ]);
 
             return response()->json($product, 200);
